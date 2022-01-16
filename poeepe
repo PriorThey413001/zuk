@@ -26,7 +26,6 @@ if msg == "z!kick" then
 if msg:match(game.Players.LocalPlayer.Name) then
     game.Players.LocalPlayer:Kick('You have been kicked')
     end
-end
 
 
 
